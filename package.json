@@ -1,8 +1,22 @@
 {
-  "name": "@onwidget/astrowind",
-  "description": "A template to make your website using Astro + Tailwind CSS.",
+  "name": "@michzuerch/PrivaterAutomarkt8",
+  "description": "Homepage Privater Automarkt using Astro + Tailwind CSS.",
   "version": "0.9.8",
   "private": true,
+  "homepage": "https://github.com/michzuerch/PrivaterAutomarkt8#readme",
+  "author": {
+    "name": "Michael Zuercher",
+    "email": "michzuerch@gmail.com",
+    "url": "https://github.io/michzuerch"
+  },
+  "repository": "github:michzuerch/PrivaterAutomarkt7",
+  "keywords": [
+    "Homepage",
+    "Privater Automarkt",
+    "billig-car.de",
+    "Radolfzell"
+  ],
+  "displayName": "Privater Automarkt 7",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -41,8 +55,10 @@
     "subfont": "^6.12.4",
     "svgo": "2.8.0",
     "tailwindcss": "^3.2.4",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "daisyui": "^2.50.0"
   },
+  "dependencies": {},
   "engines": {
     "node": ">=16.12.0"
   }
