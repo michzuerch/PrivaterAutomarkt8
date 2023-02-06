@@ -3,13 +3,12 @@ import defaultImage from './assets/images/default.png';
 const CONFIG = {
   name: 'Privater Automarkt',
 
-  origin: 'https://astrowind.vercel.app',
+  origin: 'https://www.billig-car.de',
   basePathname: '/',
   trailingSlash: false,
 
   title: 'Privater Automarkt',
-  description:
-    'Homepage Privater Automarkt Radolfzell',
+  description: 'Homepage Privater Automarkt Radolfzell',
   defaultImage: defaultImage,
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
@@ -25,7 +24,7 @@ const CONFIG = {
   }),
 
   googleAnalyticsId: false, // or "G-XXXXXXXXXX",
-	googleSiteVerificationId: 'orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M',
+  googleSiteVerificationId: 'orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M',
 
   blog: {
     disabled: false,
