@@ -2,8 +2,6 @@
 import { SITE } from '~/config.mjs';
 import Layout from '~/layouts/PageLayout.astro';
 
-import Gallery from '~/components/widgets/Gallery.astro';
-
 const meta = {
   title: SITE.title,
   description: SITE.description,
@@ -11,4 +9,6 @@ const meta = {
 };
 ---
 
-<Layout {meta}>Impressum</Layout>
+<Layout {meta}>
+  <div class="text-red-50">Impressum</div>
+</Layout>

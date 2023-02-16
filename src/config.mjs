@@ -7,7 +7,7 @@ const CONFIG = {
   basePathname: '/',
   trailingSlash: false,
 
-  title: 'Privater Automarkt',
+  title: 'Privater Automarkt Radolfzell',
   description: 'Homepage Privater Automarkt Radolfzell',
   defaultImage: defaultImage,
 
