@@ -13,27 +13,29 @@ test.describe('Basics', () => {
 test.describe('Back to home', () => {
   test('Go to location and test link to home', async ({ page }) => {
     await page.goto(url);
-    await page.getByRole('link', { name: 'Standort' }).click();
-    await page.locator('#header').getByRole('link', { name: 'Privater Automarkt' }).click();
+    await page.getByRole('link', { name: /Standort/ }).click();
+    //await page.getByTestId('homelink').click();
+    await page.waitForLoadState("domcontentloaded");
+    await page.getByRole('link', { name: 'Privater Automarkt' }).click();
     await expect(page).toHaveURL(url);
     page.close();
   });
 });
 
 test.describe('Links from index', () => {
-  test('gallery desktop', async ({ page }) => {
+  test('gallery', async ({ page }) => {
     await page.goto(url);
-    await expect(page.getByRole('link', { name: 'Galerie' })).toHaveAttribute('href', '/gallery');
-    await page.getByRole('link', { name: 'Galerie' }).click();
+    await expect(page.getByRole('link', { name: /Galerie/ })).toHaveAttribute('href', '/gallery');
+    await page.getByRole('link', { name: /Galerie/ }).click();
     await expect(page).toHaveURL(/.*gallery/);
     await expect(page).toHaveScreenshot({ animations: 'disabled', fullPage: true });
     page.close();
   });
 
-  test('location desktop', async ({ page }) => {
+  test('location', async ({ page }) => {
     await page.goto(url);
-    await expect(page.getByRole('link', { name: 'Standort' })).toHaveAttribute('href', '/location');
-    await page.getByRole('link', { name: 'Standort' }).click();
+    await expect(page.getByRole('link', { name: /Standort/ })).toHaveAttribute('href', '/location');
+    await page.getByRole('link', { name: /Standort/ }).click();
     await expect(page).toHaveURL(/.*location/);
     await expect(page).toHaveScreenshot({
       animations: 'disabled',
@@ -44,10 +46,10 @@ test.describe('Links from index', () => {
     page.close();
   });
 
-  test('impressum desktop', async ({ page }) => {
+  test('impressum', async ({ page }) => {
     await page.goto(url);
-    await expect(page.getByRole('link', { name: 'Impressum' })).toHaveAttribute('href', '/impressum');
-    await page.getByRole('link', { name: 'Impressum' }).click();
+    await expect(page.getByRole('link', { name: /Impressum/ })).toHaveAttribute('href', '/impressum');
+    await page.getByRole('link', { name: /Impressum/ }).click();
     await expect(page).toHaveURL(/.*impressum/);
     await expect(page).toHaveScreenshot({ animations: 'disabled', fullPage: true });
     page.close();

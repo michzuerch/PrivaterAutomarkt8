@@ -5,15 +5,14 @@ const config: PlaywrightTestConfig = {
   outputDir: './playwright-report',
   testDir: './e2e',
   testMatch: ['desktop.spec.ts', 'mobile.spec.ts'],
-  //testMatch: ['desktop.spec.ts'],
-  timeout: 25 * 1000,
-  fullyParallel: true,
+  timeout: 30 * 1000,
+  fullyParallel: false,
   workers: process.env.CI ? 1 : 1,
   reporter: process.env.CI
     ? [['github'], ['html', { outputFolder: 'test-report' }], ['list']]
     : [['html', { outputFolder: 'test-report' }], ['list']],
   use: {
-    actionTimeout: 25 * 1000,
+    actionTimeout: 30 * 1000,
     headless: true,
     locale: 'de-DE',
     baseURL: 'http://localhost:3000',
@@ -28,20 +27,20 @@ const config: PlaywrightTestConfig = {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
-    // {
-    //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'] },
-    // },
-    // {
-    //   name: 'webkit',
-    //   use: { ...devices['Desktop Safari'] },
-    // },
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
+    },
+    {
+      name: 'webkit',
+      use: { ...devices['Desktop Safari'] },
+    },
   ],
 
   webServer: {
     command: 'npm run dev',
     url: 'http://localhost:3000',
-    timeout: 10 * 1000,
+    timeout: 30 * 1000,
     reuseExistingServer: true,
   },
 };
