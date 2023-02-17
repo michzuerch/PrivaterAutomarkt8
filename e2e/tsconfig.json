@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
-    "baseUrl": ".", // This must be specified if "paths" is.
+    "baseUrl": ".",
     "paths": {
-      "@testhelper/*": ["packages/testhelper/*"] // This mapping is relative to "baseUrl".
+      "@testhelper/*": [
+        "packages/testhelper/*"
+      ]
     }
   }
 }
