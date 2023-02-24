@@ -22,10 +22,8 @@ test.describe('Back to home', () => {
     await page.goto(url);
     await page.getByRole('button', { name: 'Toggle Menu' }).click();
     await page.getByRole('link', { name: /Standort/ }).click();
-    await page.waitForLoadState("domcontentloaded");
-    await page
-      .getByRole('link', { name: /Privater Automarkt/ })
-      .click();
+    await page.waitForSelector('text=Privater Automarkt', { state: 'visible' });
+    await page.getByRole('link', { name: /Privater Automarkt/ }).click();
     await expect(page).toHaveURL(url);
     page.close();
   });

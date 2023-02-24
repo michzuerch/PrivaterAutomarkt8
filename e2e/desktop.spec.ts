@@ -13,9 +13,8 @@ test.describe('Basics', () => {
 test.describe('Back to home', () => {
   test('Go to location and test link to home', async ({ page }) => {
     await page.goto(url);
-    await page.getByRole('link', { name: /Standort/ }).click();
-    //await page.getByTestId('homelink').click();
-    await page.waitForLoadState("domcontentloaded");
+    await page.getByRole('link', { name: 'Standort' }).click();
+    await page.waitForSelector('text=Privater Automarkt', { state: 'visible' });
     await page.getByRole('link', { name: 'Privater Automarkt' }).click();
     await expect(page).toHaveURL(url);
     page.close();
@@ -28,6 +27,7 @@ test.describe('Links from index', () => {
     await expect(page.getByRole('link', { name: /Galerie/ })).toHaveAttribute('href', '/gallery');
     await page.getByRole('link', { name: /Galerie/ }).click();
     await expect(page).toHaveURL(/.*gallery/);
+    await page.waitForTimeout(3000);
     await expect(page).toHaveScreenshot({ animations: 'disabled', fullPage: true });
     page.close();
   });

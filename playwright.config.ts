@@ -13,7 +13,7 @@ const config: PlaywrightTestConfig = {
     : [['html', { outputFolder: 'test-report' }], ['list']],
   use: {
     actionTimeout: 30 * 1000,
-    headless: true,
+    headless: false,
     locale: 'de-DE',
     baseURL: 'http://localhost:3000',
     viewport: { width: 1920, height: 1080 },

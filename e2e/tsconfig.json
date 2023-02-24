@@ -2,9 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@testhelper/*": [
-        "packages/testhelper/*"
-      ]
+      "@testhelper/*": ["packages/testhelper/*"]
     }
   }
 }
