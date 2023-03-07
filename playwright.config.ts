@@ -36,7 +36,7 @@ const config: PlaywrightTestConfig = {
       use: { ...devices['Desktop Safari'] },
     },
   ],
- webServer: {
+  webServer: {
     command: 'npm run dev',
     url: 'http://localhost:3000/',
     timeout: 120 * 1000,
