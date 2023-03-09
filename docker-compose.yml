@@ -1,14 +1,16 @@
 version: '3.9'
 services:
-  site:
-    image: node:18
+  astro:
+    build: .
     ports:
-      - 3000:3000
-    volumes:
-      - ./:/project
-    command: >
-      sh -c " cd /project && npm install && npm run dev -- --host 0.0.0.0 & tail -f /dev/null "
-  tests:
-    image: mcr.microsoft.com/playwright:focal
+      - '3000:3000'
+    expose:
+      - '3000'
+  playwright:
+    image: mcr.microsoft.com/playwright
+    ports:
+      - '9323:9323'
+    expose:
+      - '9323'
     depends_on:
-      - site
+      - astro

@@ -1,3 +1,4 @@
+# syntax=docker/dockerfile:1
 FROM node:lts AS runtime
 WORKDIR /app
 
@@ -9,6 +10,4 @@ RUN npm run build
 ENV HOST=0.0.0.0
 ENV PORT=3000
 EXPOSE 3000
-CMD node ./dist/server/entry.mjs
-
-
+CMD npm run dev -- --host 0.0.0.0 
