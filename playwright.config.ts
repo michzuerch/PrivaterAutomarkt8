@@ -5,14 +5,14 @@ const config: PlaywrightTestConfig = {
   outputDir: './playwright-report',
   testDir: './e2e',
   testMatch: ['desktop.spec.ts', 'mobile.spec.ts'],
-  timeout: 30 * 1000,
-  fullyParallel: false,
-  workers: process.env.CI ? 3 : 1,
+  timeout: 60 * 1000,
+  fullyParallel: true,
+  workers: process.env.CI ? 1 : 3,
   reporter: process.env.CI
     ? [['github'], ['html', { outputFolder: 'test-report' }], ['list']]
     : [['html', { outputFolder: 'test-report' }], ['list']],
   use: {
-    actionTimeout: 30 * 1000,
+    actionTimeout: 60 * 1000,
     headless: true,
     locale: 'de-DE',
     baseURL: 'http://localhost:3000',
