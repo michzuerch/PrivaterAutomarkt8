@@ -1,13 +1,20 @@
-# syntax=docker/dockerfile:1
-FROM node:lts AS runtime
+# Get the base image of Node version 18
+FROM node:19
+
+# Get the latest version of Playwright
+FROM mcr.microsoft.com/playwright:focal
+
+# Set the work directory for the application
 WORKDIR /app
 
-COPY . .
+# Set the environment path to node_modules/.bin
+ENV PATH /app/node_modules/.bin:$PATH
 
+# COPY the needed files to the app folder in Docker image
+COPY . /app/
+# Get the needed libraries to run Playwright
+RUN apt-get update && apt-get -y install libnss3 libatk-bridge2.0-0 libdrm-dev libxkbcommon-dev libgbm-dev libasound-dev libatspi2.0-0 libxshmfence-dev
+
+# Install the dependencies in Node environment
 RUN npm install
-RUN npm run build
-
-ENV HOST=0.0.0.0
-ENV PORT=3000
-EXPOSE 3000
-CMD npm run dev -- --host 0.0.0.0 
+CMD npx playwright test 

@@ -7,7 +7,7 @@ const config: PlaywrightTestConfig = {
   testMatch: ['desktop.spec.ts', 'mobile.spec.ts'],
   timeout: 30 * 1000,
   fullyParallel: false,
-  workers: process.env.CI ? 1 : 1,
+  workers: process.env.CI ? 3 : 1,
   reporter: process.env.CI
     ? [['github'], ['html', { outputFolder: 'test-report' }], ['list']]
     : [['html', { outputFolder: 'test-report' }], ['list']],

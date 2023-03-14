@@ -1,5 +1,5 @@
 {
-  "name": "@michzuerch/PrivaterAutomarkt8",
+  "name": "@michzuerch/privaterautomarkt8",
   "description": "Homepage Privater Automarkt using Astro + Tailwind CSS.",
   "version": "0.9.8",
   "private": true,
@@ -22,8 +22,8 @@
     "start": "astro dev",
     "build": "astro build",
     "dev:docker": "docker run --name privaterautomarkt8 -p 3000:3000 privaterautomarkt8:latest",
-    "build:docker": "docker build -t privaterautomarkt8:latest .",
-    "test:docker": "npm run dev && npm run playwright:docker",
+    "build:docker": "docker build -t privaterautomarkt8-playwright:latest .",
+    "test:docker": "docker run --name privaterautomarkt8-playwright -p 9323:9323 --network host privaterautomarkt8-playwright:latest",
     "test": "npx playwright test",
     "test:snapshots": "npx playwright test --update-snapshots",
     "test:lighthouse": "npx lighthouse http://localhost:3000/ --output html --output-path lighthouse-result.html view",
@@ -34,25 +34,25 @@
     "subfont": "subfont -ir --no-fallbacks --silent --root dist"
   },
   "devDependencies": {
-    "@astrojs/image": "0.16.0",
-    "@astrojs/mdx": "^0.18.0",
-    "@astrojs/partytown": "^1.1.0",
-    "@astrojs/rss": "^2.2.0",
-    "@astrojs/sitemap": "^1.2.0",
-    "@astrojs/tailwind": "3.1.0",
+    "@astrojs/image": "0.16.1",
+    "@astrojs/mdx": "^0.18.1",
+    "@astrojs/partytown": "^1.1.1",
+    "@astrojs/rss": "^2.3.0",
+    "@astrojs/sitemap": "^1.2.1",
+    "@astrojs/tailwind": "3.1.1",
     "@astrolib/analytics": "^0.3.0",
     "@astrolib/seo": "^0.3.0",
     "@fontsource/inter": "^4.5.15",
     "@playwright/test": "^1.31.2",
     "@tailwindcss/typography": "^0.5.9",
-    "@typescript-eslint/eslint-plugin": "^5.54.1",
-    "@typescript-eslint/parser": "^5.54.1",
-    "astro": "2.1.2",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "astro": "2.1.3",
     "astro-compress": "1.1.35",
     "astro-icon": "^0.8.0",
     "daisyui": "^2.51.3",
-    "eslint": "^8.35.0",
-    "eslint-plugin-astro": "^0.23.0",
+    "eslint": "^8.36.0",
+    "eslint-plugin-astro": "^0.24.0",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "lighthouse": "^10.0.2",
     "limax": "^2.1.0",
@@ -68,7 +68,7 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
-    "flowbite": "^1.6.3"
+    "flowbite": "^1.6.4"
   },
   "engines": {
     "node": ">=16.12.0"
