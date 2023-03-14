@@ -2,7 +2,7 @@ import { DATE_FORMATTER } from '~/config.mjs';
 
 const formatter =
   DATE_FORMATTER ||
-  new Intl.DateTimeFormat('en', {
+  new Intl.DateTimeFormat('de', {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
