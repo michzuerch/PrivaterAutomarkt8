@@ -18,6 +18,9 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography'), require('flowbite/plugin')],
+  corePlugins: {
+    fontSize: false,
+  },
+  plugins: [require('@tailwindcss/typography'), require('flowbite/plugin'), require('tailwindcss-fluid-type')],
   darkMode: 'class',
 };
