@@ -1,6 +1,7 @@
 ---
 import { SITE } from '~/config.mjs';
 import Layout from '~/layouts/PageLayout.astro';
+import Map from '~/components/widgets/Map.astro';
 
 const meta = {
   title: SITE.title,
@@ -9,4 +10,4 @@ const meta = {
 };
 ---
 
-<Layout {meta}>Location</Layout>
+<Layout {meta}><Map /></Layout>
