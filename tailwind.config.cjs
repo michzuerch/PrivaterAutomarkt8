@@ -21,6 +21,6 @@ module.exports = {
   corePlugins: {
     fontSize: false,
   },
-  plugins: [require('@tailwindcss/typography'), require('flowbite/plugin'), require('tailwindcss-fluid-type')],
+  plugins: [require('daisyui'), require('@tailwindcss/typography'), require('tailwindcss-fluid-type')],
   darkMode: 'class',
 };

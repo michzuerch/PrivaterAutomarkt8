@@ -1,86 +1,23 @@
-<div id="controls-carousel" class="relative mx-12 h-96" data-carousel="static">
-  <!-- Carousel wrapper -->
-  <div class="relative h-96 overflow-clip rounded-lg md:h-96">
-    <!-- Item 1 -->
-    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-      <img
-        src="/Gallery/1.jpg"
-        class="absolute top-1/2 left-1/2 block w-full -translate-x-1/2 -translate-y-1/2"
-        alt="..."
-      />
+<div class="flex justify-center">
+  <div class="carousel h-96 w-2/3">
+    <div id="item1" class="carousel-item w-full">
+      <img src="/Gallery/1.jpg" class="w-full" />
     </div>
-    <!-- Item 2 -->
-    <div class="hidden duration-700 ease-in-out" data-carousel-item="">
-      <img
-        src="/Gallery/2.jpg"
-        class="absolute top-1/2 left-1/2 block w-full -translate-x-1/2 -translate-y-1/2"
-        alt="..."
-      />
+    <div id="item2" class="carousel-item w-full">
+      <img src="/Gallery/2.jpg" class="w-full" />
     </div>
-    <!-- Item 3 -->
-    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-      <img
-        src="/Gallery/3.jpg"
-        class="absolute top-1/2 left-1/2 block w-full -translate-x-1/2 -translate-y-1/2"
-        alt="..."
-      />
+    <div id="item3" class="carousel-item w-full">
+      <img src="/Gallery/3.jpg" class="w-full" />
     </div>
-    <!-- Item 4 -->
-    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-      <img
-        src="/Gallery/4.jpg"
-        class="absolute top-1/2 left-1/2 block w-full -translate-x-1/2 -translate-y-1/2"
-        alt="..."
-      />
-    </div>
-    <!-- Item 5 -->
-    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-      <img
-        src="/Gallery/5.jpg"
-        class="absolute top-1/2 left-1/2 block w-full -translate-x-1/2 -translate-y-1/2"
-        alt="..."
-      />
+    <div id="item4" class="carousel-item w-full">
+      <img src="/Gallery/4.jpg" class="w-full" />
     </div>
   </div>
-  <!-- Slider controls -->
-  <button
-    type="button"
-    class="group absolute top-0 left-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
-    data-carousel-prev
-  >
-    <span
-      class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70"
-    >
-      <svg
-        aria-hidden="true"
-        class="h-6 w-6 text-white dark:text-gray-800"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-        ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg
-      >
-      <span class="sr-only">Previous</span>
-    </span>
-  </button>
-  <button
-    type="button"
-    class="group absolute top-0 right-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
-    data-carousel-next
-  >
-    <span
-      class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70"
-    >
-      <svg
-        aria-hidden="true"
-        class="h-6 w-6 text-white dark:text-gray-800"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-        ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg
-      >
-      <span class="sr-only">Next</span>
-    </span>
-  </button>
+  <div class="flex w-2/3 justify-center gap-2 py-2">
+    <a href="#item1" class="btn-xs btn">1</a>
+    <a href="#item2" class="btn-xs btn">2</a>
+    <a href="#item3" class="btn-xs btn">3</a>
+    <a href="#item4" class="btn-xs btn">4</a>
+  </div>
 </div>
+
