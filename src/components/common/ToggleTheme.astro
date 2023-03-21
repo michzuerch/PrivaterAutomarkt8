@@ -19,6 +19,7 @@ const {
 } = Astro.props;
 ---
 
+<span>Toggle</span>
 {
   !(SITE?.defaultTheme && SITE.defaultTheme.endsWith(':only')) && (
     <button type="button" class={className} aria-label={label} data-aw-toggle-color-scheme>

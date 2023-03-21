@@ -6,15 +6,23 @@ module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,svelte,ts,tsx,vue}', './node_modules/flowbite/**/*.js'],
   theme: {
     extend: {
-      colors: {
-        primary: 'var(--aw-color-primary)',
-        secondary: 'var(--aw-color-secondary)',
-        accent: 'var(--aw-color-accent)',
-      },
       fontFamily: {
-        sans: ['var(--aw-font-sans)', ...defaultTheme.fontFamily.sans],
-        serif: ['var(--aw-font-serif)', ...defaultTheme.fontFamily.serif],
-        heading: ['var(--aw-font-heading)', ...defaultTheme.fontFamily.sans],
+        sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
+      },
+      colors: {
+        primary: 'var(--color-primary)',
+        secondary: 'var(--color-secondary)',
+      },
+      textColor: {
+        default: 'var(--color-text)',
+        offset: 'var(--color-text-offset)',
+      },
+      backgroundColor: {
+        default: 'var(--color-background)',
+        offset: 'var(--color-background-offset)',
+      },
+      borderColor: {
+        default: 'var(--color-border)',
       },
     },
   },
@@ -22,5 +30,4 @@ module.exports = {
     fontSize: false,
   },
   plugins: [require('@tailwindcss/typography'), require('flowbite/plugin'), require('tailwindcss-fluid-type')],
-  darkMode: 'class',
 };
