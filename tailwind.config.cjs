@@ -21,6 +21,13 @@ module.exports = {
   corePlugins: {
     fontSize: false,
   },
-  plugins: [require('daisyui'), require('@tailwindcss/typography'), require('tailwindcss-fluid-type')],
+  plugins: [
+    require('daisyui'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/line-clamp'),
+    require('tailwindcss-fluid-type'),
+  ],
   darkMode: 'class',
 };

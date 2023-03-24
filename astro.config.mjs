@@ -10,6 +10,7 @@ import compress from 'astro-compress';
 import { readingTimeRemarkPlugin } from './src/utils/frontmatter.mjs';
 import { SITE } from './src/config.mjs';
 import svelte from '@astrojs/svelte';
+import alpinejs from '@astrojs/alpinejs';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const whenExternalScripts = (items = []) =>
   SITE.googleAnalyticsId ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
@@ -52,6 +53,7 @@ export default defineConfig({
       logger: 1,
     }),
     svelte(),
+    alpinejs(),
   ],
   vite: {
     resolve: {
